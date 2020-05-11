@@ -1,0 +1,149 @@
+span.cell {
+  display: table-cell;
+  width: 20px;
+  height: 20px;
+}
+
+span.cell0 {
+  background: url('./image/cell_0_20x20.png');
+}
+
+span.cell1 {
+  background: url('./image/cell_1_20x20.png');
+}
+
+span.cell2 {
+  background: url('./image/cell_2_20x20.png');
+}
+
+span.cell3 {
+  background: url('./image/cell_3_20x20.png');
+}
+
+span.cell4 {
+  background: url('./image/cell_4_20x20.png');
+}
+
+span.cell5 {
+  background: url('./image/cell_5_20x20.png');
+}
+
+span.cell6 {
+  background: url('./image/cell_6_20x20.png');
+}
+
+span.cell7 {
+  background: url('./image/cell_7_20x20.png');
+}
+
+span.cell8 {
+  background: url('./image/cell_8_20x20.png');
+  animation: closedOpacity 1.2s;
+}
+
+div.row {
+  display: table-row;
+}
+
+div.well-border {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  background: inherit;
+}
+
+div.well-border.paused {
+  opacity: 0.4;
+}
+
+div.well {
+  display: table;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.fire {
+  display: table-cell;
+  width: 20px;
+  height: 20px;
+  background: url('./image/fire_20x20.png') left center;
+  animation: play .4s steps(3) infinite;
+}
+
+@keyframes play {
+  100% {
+    background-position: -60px;
+  }
+}
+
+@keyframes closedOpacity {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 350px) {
+  span.cell {
+    display: table-cell;
+    width: 16px;
+    height: 16px;
+  }
+
+  span.cell0 {
+    background: url('./image/cell_0_16x16.png');
+  }
+
+  span.cell1 {
+    background: url('./image/cell_1_16x16.png');
+  }
+
+  span.cell2 {
+    background: url('./image/cell_2_16x16.png');
+  }
+
+  span.cell3 {
+    background: url('./image/cell_3_16x16.png');
+  }
+
+  span.cell4 {
+    background: url('./image/cell_4_16x16.png');
+  }
+
+  span.cell5 {
+    background: url('./image/cell_5_16x16.png');
+  }
+
+  span.cell6 {
+    background: url('./image/cell_6_16x16.png');
+  }
+
+  span.cell7 {
+    background: url('./image/cell_7_16x16.png');
+  }
+
+  span.cell8 {
+    background: url('./image/cell_8_16x16.png');
+    animation: closedOpacity 1.2s;
+  }
+
+  .fire {
+    display: table-cell;
+    width: 16px;
+    height: 16px;
+    background: url('./image/fire_16x16.png') left center;
+    animation: play .4s steps(3) infinite;
+  }
+
+  @keyframes play {
+    100% {
+      background-position: -48px;
+    }
+  }
+}

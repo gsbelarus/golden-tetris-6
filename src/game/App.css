@@ -1,0 +1,149 @@
+body {
+  background: url('./image/back.png');
+}
+
+.App {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  height: 100vh;
+  background: transparent;
+}
+
+.Field {
+  display: flex;
+  flex-direction: column;
+}
+
+.FieldInnerFrame {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-left: 12px;
+}
+
+.ControlKeys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  width: 100%;
+  height: 120px;
+  margin-top: 8px;
+}
+
+.Key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-size: 18px;
+  height: 52px;
+}
+
+@media screen and (max-height: 640px) {
+  .ControlKeys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: 96px;
+    margin-top: 8px;
+  }
+
+  .Key {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: 18px;
+    height: 40px;
+  }
+}
+
+.KeyRotate {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.KeyLeft {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin-right: 8px;
+}
+
+.KeyRight {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin-left: 8px;
+}
+
+.KeyDrop {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.KeyStart {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.KeyLevelDown {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin-right: 4px;
+}
+
+.KeyLevelUp {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin-left: 4px;
+}
+
+.Toolbar {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.ToolButton {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  height: 26px;
+  margin-right: 8px;
+}
+
+.ToolButton:last-child {
+  margin-right: 0;
+}
