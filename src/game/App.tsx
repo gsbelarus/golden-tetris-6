@@ -467,7 +467,7 @@ export const App = ({ lang }: { lang: Lang }) => {
   const controlKeys = useMemo( () =>
     <div className="ControlKeys">
       {
-        inPlay || paused
+        stage !== 'READY'
         ?
           <>
             <Button className="Key KeyRotate" caption="⭯ " img={rotateArrow} disabled={!inPlay} onClick={rotateFigure} />
@@ -482,7 +482,7 @@ export const App = ({ lang }: { lang: Lang }) => {
             <Button className="Key KeyLevelUp" caption={getLocString('levelUp', lang)} disabled={level === maxLevel} onClick={ () => dispatch({ type: 'GAME_INC_LEVEL' }) } />
           </>
       }
-    </div>, [level, inPlay, paused, lang, rotateFigure, moveFigureLeft, moveFigureRight, dropFigure]
+    </div>, [level, stage, inPlay, lang, rotateFigure, moveFigureLeft, moveFigureRight, dropFigure]
   );
 
   const onKeyDown = useCallback( (event: React.KeyboardEvent<HTMLDivElement>) => {
