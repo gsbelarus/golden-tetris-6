@@ -89,7 +89,7 @@ div.well {
   to {opacity: 1}
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   span.cell {
     display: table-cell;
     width: 16px;

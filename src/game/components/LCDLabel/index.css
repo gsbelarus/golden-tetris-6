@@ -73,7 +73,7 @@
   background-position: 0 calc(-1 * 27px)
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   .lcd-border {
     border-top: 1px solid grey;
     border-left: 1px solid grey;
